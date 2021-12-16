@@ -12,11 +12,11 @@ public class Car {
         this.engine = engine;
     }
 
-    public float generatePrice(ArrayList<Component> components){
+    public float generatePrice(ArrayList<Component> components,CarModel model){
         float sum = 0;
         for (Component c : components){
             sum+=c.getPrice();
         }
-        return sum;
+        return sum+ model.cost;
     }
 }
